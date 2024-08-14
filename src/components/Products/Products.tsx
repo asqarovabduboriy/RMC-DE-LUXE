@@ -4,7 +4,7 @@ import { data } from '../data/index'
 
 
 const Products: React.FC = () => {
-    const [slice, setSlice] = useState<boolean>(3)
+    const [slice, setSlice] = useState<number>(3)
 
     const data_map: JSX.Element[] = data.slice(0, slice).map((item) => (
         <div className="product" key={item.id}>
