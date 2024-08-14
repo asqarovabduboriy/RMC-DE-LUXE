@@ -1,0 +1,122 @@
+.item{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 30px;
+    background-color: #EDF3F5;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #E0E0E0;
+        color: #000;
+        transition: .3s;
+    }
+
+    select{
+        border: none;
+        background-color:transparent;
+        outline: none;
+    }
+
+}
+
+.karta{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 30px;
+    background-color: #333333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px
+    ;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        transition: .3s;
+    }
+}
+
+h1{
+    text-align: left;
+    font-size: 45px;
+    margin: 30px 0;
+    font-weight: 600;
+}
+
+.wrapper_itmes{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.wrapper_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobilni_karta{
+    display: none;
+}
+
+@media (max-width: 975px) {
+    .wrapper_itmes{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .wrapper_item{
+        flex-direction: column;
+    }
+
+    .karta{
+      display: none;
+    }
+
+    .mobilni_karta{
+        display: flex;
+    }
+}
+
+@media (max-width: 610px) {
+    .item{
+        padding: 10px 12px;
+    }
+
+    .mobilni_karta{
+        padding: 10px 12px;
+    }
+ 
+}
+
+@media screen and (max-width: 490px) {
+    .wrapper_itmes{
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .item{
+        padding: 12px 40px;
+    }
+
+    .mobilni_karta{
+        padding: 12px 40px;
+    }
+}
+
+
+@media screen and (max-width: 405px) {
+    .wrapper_itmes{
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .item{
+        padding: 12px 20px;
+    }
+
+    .mobilni_karta{
+        padding: 12px 20px;
+    }
+}
